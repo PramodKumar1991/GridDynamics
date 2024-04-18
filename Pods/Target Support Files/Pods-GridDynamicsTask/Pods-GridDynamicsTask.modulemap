@@ -1,0 +1,6 @@
+framework module Pods_GridDynamicsTask {
+  umbrella header "Pods-GridDynamicsTask-umbrella.h"
+
+  export *
+  module * { export * }
+}

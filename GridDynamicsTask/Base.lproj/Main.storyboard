@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="GridDynamicsTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dEb-Il-nGX">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="LEI-es-Nfy"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="PdT-CU-jmH"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dEb-Il-nGX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="66a-kc-MFp"/>
+                            <constraint firstItem="dEb-Il-nGX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6jq-Vz-qE6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dEb-Il-nGX" secondAttribute="bottom" id="VMq-n9-jMX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dEb-Il-nGX" secondAttribute="trailing" id="gUy-tJ-nlM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="newsTableView" destination="dEb-Il-nGX" id="uaC-YV-QBP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="324" y="-121"/>
+        </scene>
+        <!--News Details Controller-->
+        <scene sceneID="f8j-ji-sAN">
+            <objects>
+                <viewController storyboardIdentifier="NewsDetailsController" id="ipA-XL-TaZ" customClass="NewsDetailsController" customModule="GridDynamicsTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Der-TQ-VzE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XcK-fa-u2v">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ipA-XL-TaZ" id="6lf-Qi-XDa"/>
+                                    <outlet property="delegate" destination="ipA-XL-TaZ" id="tSJ-JE-nLH"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gEd-R2-Ggg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XcK-fa-u2v" firstAttribute="trailing" secondItem="gEd-R2-Ggg" secondAttribute="trailing" id="OMc-rM-YU7"/>
+                            <constraint firstItem="gEd-R2-Ggg" firstAttribute="bottom" secondItem="XcK-fa-u2v" secondAttribute="bottom" id="TBS-HY-thw"/>
+                            <constraint firstItem="XcK-fa-u2v" firstAttribute="top" secondItem="gEd-R2-Ggg" secondAttribute="top" id="mFM-8e-jgb"/>
+                            <constraint firstItem="XcK-fa-u2v" firstAttribute="leading" secondItem="gEd-R2-Ggg" secondAttribute="leading" id="qog-II-7k0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="newsTableView" destination="XcK-fa-u2v" id="tTp-UG-0AM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SXe-bm-Cxs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57.251908396946561" y="-798.59154929577471"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
